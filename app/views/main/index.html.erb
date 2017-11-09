@@ -5,8 +5,10 @@
 <% @posts.each do |post|%>
 <p>
 Title: <%= post.title %> <br/>
-Body: <%= post.body%>
-<a href="/main/edit">[edit]</a>
-<a href="/main/delete">[delete]</a>
+Body: <%= post.body%></br>
+Post Id: <%= post.id%>
+<a href="/main/edit/<%=post.id%>">[edit]</a>
+<a href="/main/delete/<%=post.id%>">[delete]</a>
+<a href="/main/view/<%=post.id%>">[view]</a>
 </p>
 <%end%>

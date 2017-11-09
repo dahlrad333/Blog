@@ -4,12 +4,14 @@ class MainController < ApplicationController
   end
 
   def view
+    @the_post = Post.find(params[:id])
   end
 
   def add
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def delete
@@ -32,5 +34,9 @@ class MainController < ApplicationController
   end
 
   def editConfirm
+    @post = Post.find(params[:id])
+    post.title = params[:title]
+    post.body = params[:body]
+    post.save
   end
 end

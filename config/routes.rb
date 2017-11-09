@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   
   get 'main/index'
 
-  get 'main/view'
+  get 'main/view/:id' => 'main#view'
 
   get 'main/add'
 
-  get 'main/edit'
+  get 'main/edit/:id' => 'main#edit'
 
   get 'main/delete'
 
